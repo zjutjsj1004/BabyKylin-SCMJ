@@ -26,6 +26,7 @@ app.get('/get_server_info',function(req,res){
 	var sign = req.query.sign;
 	console.log(serverId);
 	console.log(sign);
+	console.log(config.SERVER_ID)
 	if(serverId  != config.SERVER_ID || sign == null){
 		http.send(res,1,"invalid parameters");
 		return;
